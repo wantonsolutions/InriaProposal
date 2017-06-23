@@ -1,0 +1,72 @@
+\begin{thebibliography}{10}
+
+\bibitem{Abrahamson_sheddinglight}
+J.~Abrahamson, I.~Beschastnikh, Y.~Brun, and M.~D. Ernst.
+\newblock Shedding light on distributed system executions.
+
+\bibitem{BABAOGLU1995173}
+O.~Babaoglu and M.~Raynal.
+\newblock Specification and verification of dynamic properties in distributed
+  computations.
+\newblock {\em Journal of Parallel and Distributed Computing}, 28(2):173 --
+  185, 1995.
+
+\bibitem{Ernst07}
+M.~D. Ernst, J.~H. Perkins, P.~J. Guo, S.~McCamant, C.~Pacheco, M.~S. Tschantz,
+  and C.~Xiao.
+\newblock The {Daikon} system for dynamic detection of likely invariants.
+\newblock {\em Science of Computer Programming}, 69(1--3):35--45, Dec. 2007.
+
+\bibitem{Fromentin:1995:OAD:213523.213533}
+E.~Fromentin, C.~Jard, G.-V. Jourdan, and M.~Raynal.
+\newblock On-the-fly analysis of distributed computations.
+\newblock {\em Inf. Process. Lett.}, 54(5):267--274, June 1995.
+
+\bibitem{FROMENTIN1997522}
+E.~Fromentin and M.~Raynal.
+\newblock Shared global states in distributed computations.
+\newblock {\em Journal of Computer and System Sciences}, 55(3):522 -- 528,
+  1997.
+
+\bibitem{5727765}
+E.~Fromentin, M.~Raynal, V.~K. Garg, and A.~Tomlinson.
+\newblock On the fly testing of regular patterns in distributed computations.
+\newblock In {\em 1994 Internatonal Conference on Parallel Processing Vol. 2},
+  volume~2, pages 73--76, Aug 1994.
+
+\bibitem{Garg:2014:MAS:2580115.2580404}
+V.~K. Garg, A.~Agarwal, and V.~Ogale.
+\newblock Modeling, analyzing and slicing periodic distributed computations.
+\newblock {\em Inf. Comput.}, 234:26--43, Feb. 2014.
+
+\bibitem{Hurfin:1998:EDD:286181.286G191}
+M.~Hurfin, M.~Mizuno, M.~Singhal, and M.~Raynal.
+\newblock Efficient distributed detection of conjunctions of local predicates.
+\newblock {\em IEEE Trans. Softw. Eng.}, 24(8):664--677, Aug. 1998.
+
+\bibitem{mattern_vector_clocks_1989}
+F.~Mattern.
+\newblock Virtual {T}ime and {G}lobal {S}tates of {D}istributed {S}ystems.
+\newblock In {\em Parallel and Distributed Algorithms}, pages 215--226, 1989.
+
+\bibitem{MATTERN1993423}
+F.~Mattern.
+\newblock Efficient algorithms for distributed snapshots and global virtual
+  time approximation.
+\newblock {\em Journal of Parallel and Distributed Computing}, 18(4):423 --
+  434, 1993.
+
+\bibitem{yang_modist_nsdi09}
+J.~Yang, T.~Chen, M.~Wu, Z.~Xu, X.~Liu, H.~Lin, M.~Yang, F.~Long, L.~Zhang, and
+  L.~Zhou.
+\newblock Modist: Transparent model checking of unmodified distributed systems.
+\newblock In {\em Proceedings of the 6th USENIX Symposium on Networked Systems
+  Design and Implementation}, NSDI'09, pages 213--228, Berkeley, CA, USA, 2009.
+  USENIX Association.
+
+\bibitem{SMTSynth}
+D.~Yurichev.
+\newblock Quick introduction into sat/smt solvers and symbolic execution.
+\newblock https://yurichev.com/writings/SAT\_SMT\_draft\-EN.pdf.
+
+\end{thebibliography}

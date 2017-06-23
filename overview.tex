@@ -1,0 +1,17 @@
+\section{Overview}
+
+An increasing common trend in distributed computing is the mass execution of
+small process. This pattern is prevalent in big data processing, and micro
+service based architectures. A key tenant of these processes is minimal or non
+existent state. This property is largely due to the complexities of designing
+massive systems which can coordinate stateful behavior. Here we propose a
+technique for analyzing the stateful behavior of thousands of homogeneous
+processes, over many executions. Our analysis aggregates the logs of processes
+from 1 or more executions, and composes them into an aggregate state machine.
+These models are replicated in a runtime, and simulate executions which are
+checked for safety and liveness properties.
+
+Further we propose a relaxed model for state machine construction which
+produces smaller, faster to check models, with a dramatized level of false
+positives.
+

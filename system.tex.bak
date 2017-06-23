@@ -1,0 +1,182 @@
+\section{System}
+
+The following section discribes our analysis system. The section is broken up
+into 3 section. First the translation of distributed logs to aggregated FSM is
+detail. Second state, and transition invariant detection are discussed, and
+operation generation. Finally we discuss our execution engine and fault
+detectors.
+
+\subsection{FSM Generation}
+
+Prior to execution, a system must be insturmented to log its state, and the
+state of sent and received messages. For this purpose we make use of the \dinv
+runtime enviornment. \dinv logs the state of individual processes during
+execution. Using automatic instrumentation, all in scope variables are written
+to a key-value store at the entracne and exit of each function. Upon executing
+a sending, reciving or local event, the contents of the key value store are
+persisted to disk (or aggregated to a central source) with a corresponding
+vector timestamp. Each write to disk corresponnds to a trace pair $(s_i,e_i)$.
+Post execution the logs of one or more executions are aggregated together for
+FSM generation. \\
+
+\noindent\textbf{Logging State} Defining a distributed system by the state of
+each process, and the state of messages, is a fundemenal distributed model for
+many algorithms.
+
+Capturing all process, and message state is the fundemental backbone of
+distributed algorithms~\cite{mattern_vector_clocks_1989,MATTERN1993423}.
+Further, the reduction of distributed executions to communication events is a
+common method for reducing complexity while retaining essential
+information~\cite{Fromentin:1995:OAD:213523.213533,BABAOGLU1995173,5727765,Hurfin:1998:EDD:286181.286G191,FROMENTIN1997522}.
+
+\noindent{FMS Graph Construction}FSM nodes are built by matching states. User
+configuration determines how matching is performed. By default \textbf{State
+Matching} is used to match states as it gaurntees
+correctness~\cite{Garg:2014:MAS:2580115.2580404}. Users may either specify a
+subset of named variables, variables for \textbf{Relaxed state matching}.
+Matching states are processed in linear time by hashing and maping variable
+states. Similarly edges are constructed using \textbf{Event Matching}. As above
+relaxed event matching is performed on a subset of user defined variables.
+
+\todo{Finish Diagram}
+\begin{tikzpicture}[>=stealth',shorten >=1pt,auto, node distance=2cm]
+
+    \node[initial,state] (I) {$I$};
+    \node[state]    (asleep)  [below of=I] {$asleep$};
+    \node[state]    (hungry)  [below of=asleep] {$hungry$};
+
+    \path[->] (I) edge node {$sleep$} (asleep);
+
+\end{tikzpicture}
+
+\subsection{Invariant Detection, and operation inferance}
+
+Using exact state matching the FMS generated from the aggregation of traces is
+a strict under representation of a sysetems behaviour (\todo{find a fundemental
+paper on dynamic analyisis}), therefore all safty, and liveness violations are
+correct. In practice exact state matching results in a massive FSM with few
+inferred paths to traverse (as the likelyhood of variables such as buffers,
+id's and ports matching is low). Relaxed state matching generates a smaller FSM
+with more paths to explore. However, matching on a subset of state allows
+foalse positives in both safty, and liveness detection. Here we present a novel
+technique for identifying safty and liveness conditions on relaxed state
+matching which orders violations by their likelyhood of being false positives.
+This technique uses simulated values for varibles which do not match, and
+invariant violations as a heruistic measure of divergance from the real system.
+
+Each node $n$ is composed of a set of matching states, $n =
+{s_0,s_1,\dots,s_n}$. Some subset of variables in each matching state $s =
+{v_0,v_1,\dots,v_m}$ match, while another subset of variables do not. The
+subset of variables which do not match form a sub trace which profiles their
+behaviour. We use Daikon to detect data invariants which held during
+execution~\cite{Ernst07}.
+
+Edges connecting nodes are state transitions with an associated operation on
+the state. In the case of \textbf{State Matching} transitions between state,
+are equivelent to an assignment statement (ie if node $n$ and $n$ are
+constructed from exactly matching states, for any transition $e$ between states
+$\forall i$, $v_i == v'_i$. \textbf{Relaxed State Matching} is more
+complicated, because many values may exist for any variable $v$ in state $n$. A
+transition between two states may not be valid in the case of \textbf{Relaxed
+State Matching}, as the aggregate state is an over aproximation of the systems
+observed behaviour.
+
+To reduce false positives when applying \textbf{Relaxed State Matching} the
+values of unmatched variables are simulated during runtime. If the trace
+produced by the runtime violates invariants detected from real executions, the
+probablity of a violation being a false positive increases \todo{this is a big
+claim, and one that will need to be backed up. If it is true it will be a
+research contribution.} To simulate variable values, we synthezize operations
+using Z3, and input output examples from traces~\cite{SMTSynth}. The state
+transitions infered by Z3 are applied to varibles during runtime. In cases
+where no operations could be infered within a given timeout, a value is
+deterministicly chosen for relaxed variable.
+
+\subsection{Runtime}
+
+\todo{Our} runtime executes replicated versions of the inferred state machine.
+Each machine can send and receive messages to any other machine, and execute
+local events. The number of state machines to execute is a user defined
+parameter. More machines increase runtime, but may detect subtle bugs relient
+on complicated muliti machine state. Algorithm ~\ref{alg:runtime} overview our
+runtime engine.
+
+\begin{algorithm}
+    \caption{Runtime Algorithm}
+    \label{alg:runtime}
+    \KwData{$Replication, Depth, Model, Conditions$}
+    \KwResult{Condition Violating Traces}
+    \While{$Depth \geq 0$}{
+        $eventQueue \gets GenEvents(Model,Replication)$ \\
+        \While{$\neg eventQuene.Empty()$}{
+            $ApplyEvent(eventQueue.Pop())$
+            $CheckSafty(Conditions)$
+            $CheckLiveness(Conditions)$
+            $Recurse(Replication,Depth--,Model,Conditions)$
+        }
+    }
+\end{algorithm}
+
+Initally all machines are set to an inital state $\perp$. All vailid events are
+generated at the beginning of the main runtime loop. A valid event is the set
+of all outgoing edges of all the current state of all nodes. Each event is
+added to an event queue and is appled systematically. Three kinds of events can
+be applied at runtime.
+
+\begin{itemize}
+
+    \item\emph{Local Event} A local event transitions a single node from one state to another.
+
+    \item\emph{Send Event} A send event generates a message, which is placed on an outstanding message list
+
+    \item\emph{Recive Event} A receive event consumes a message. Two conditions
+        exist for receviving messages, droppable, and undroppable. Droppable
+        message can be consumed by any machine in any state, if no transition
+        exists for the message, the state of the received machine does not
+        change. Undroppable messages are only delived to machiens which are in
+        a state with a transition corresponding to the message being
+        received~\cite{yang_modist_nsdi09}.
+
+\end{itemize}
+
+
+Messages are consummed by only a single node. As our serch is performed
+systematically, all permutations of message delivery are eventually explored. 
+
+While executing a trace of variables is maintined. Variables are updated during
+each state transition. If the state transitioned into is exactly matched,
+runtime variables are assigned the value of the state. Otherwise the operations
+determined by constraint solving are applied to the variables.
+
+The runtime enviornment has a holsitic view of the system, and is therefore
+able to check safty predicates at all times. Predicates defined by a user
+specification, such as only one machine may enter the critical section at a
+time, or at least one node has a token, are checked on a per variable basis.
+
+Liveness conditions are checked using techniques developed by
+~\cite{Garg:2014:MAS:2580115.2580404}. If a periodic pattern is found in a
+distributed exection, ie if at two points in an execution, the state of the
+system is exactly the same, the events between the two states can periodically
+execute forever (given non random liveness guarentees). If exact states are
+revisited during runtime, and a liveness condition is not met over the interval
+between matching states, a liveness violation is reported.
+
+\subsection{Violations \& false positive reduction}
+
+The result of simulaton is a set of traces on which a safty or liveness
+violation occured. Traces contain vector time stamps for simulated events,
+which are formated to be visualized by ShiViz, to aid in
+debugging~\cite{Abrahamson_sheddinglight}. Traces generated using \textbf{State
+Matching} and \textbf{Event Matching} are guarenteed bugs, the traces of which
+can be traversed to identify the root cause of the bug. 
+
+Traces generated using \textbf{Relaxed State Matching} and \textbf{Relaxed
+Event Matching} may be false positives. These traces are aproximatly ordered by
+their likelyhood to be false positives. Each simulated trace (containing
+simulated variable values at runtime) is analyzed by Daikon. Using Daikons
+Invariant Difference tool the count of invariant violations generated by the
+simulated execution can be determined. Traces which violate the minimum count
+of invariants are reported to the user first, as they are least likely to have
+diverged from the sytems real behavior.
+
+
