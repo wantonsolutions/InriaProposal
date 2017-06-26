@@ -11,11 +11,32 @@ O.~Babaoglu and M.~Raynal.
 \newblock {\em Journal of Parallel and Distributed Computing}, 28(2):173 --
   185, 1995.
 
+\bibitem{Corbineau:2007:DLC:1786134.1786139}
+P.~Corbineau.
+\newblock A declarative language for the coq proof assistant.
+\newblock In {\em Proceedings of the 2007 International Conference on Types for
+  Proofs and Programs}, TYPES'07, pages 69--84, Berlin, Heidelberg, 2008.
+  Springer-Verlag.
+
+\bibitem{Dean:2008:MSD:1327452.1327492}
+J.~Dean and S.~Ghemawat.
+\newblock Mapreduce: Simplified data processing on large clusters.
+\newblock {\em Commun. ACM}, 51(1):107--113, Jan. 2008.
+
 \bibitem{Ernst07}
 M.~D. Ernst, J.~H. Perkins, P.~J. Guo, S.~McCamant, C.~Pacheco, M.~S. Tschantz,
   and C.~Xiao.
 \newblock The {Daikon} system for dynamic detection of likely invariants.
 \newblock {\em Science of Computer Programming}, 69(1--3):35--45, Dec. 2007.
+
+\bibitem{201559}
+S.~Fouladi, R.~S. Wahby, B.~Shacklett, K.~V. Balasubramaniam, W.~Zeng,
+  R.~Bhalerao, A.~Sivaraman, G.~Porter, and K.~Winstein.
+\newblock Encoding, fast and slow: Low-latency video processing using thousands
+  of tiny threads.
+\newblock In {\em 14th USENIX Symposium on Networked Systems Design and
+  Implementation (NSDI 17)}, pages 363--376, Boston, MA, 2017. USENIX
+  Association.
 
 \bibitem{Fromentin:1995:OAD:213523.213533}
 E.~Fromentin, C.~Jard, G.-V. Jourdan, and M.~Raynal.
@@ -44,6 +65,12 @@ M.~Hurfin, M.~Mizuno, M.~Singhal, and M.~Raynal.
 \newblock Efficient distributed detection of conjunctions of local predicates.
 \newblock {\em IEEE Trans. Softw. Eng.}, 24(8):664--677, Aug. 1998.
 
+\bibitem{specifying-and-verifying-systems-with-tla}
+L.~Lamport, J.~Matthews, M.~Tuttle, and Y.~Yu.
+\newblock Specifying and verifying systems with tla+.
+\newblock page 45–48, Saint-Emilion, France, September 2002. Association for
+  Computing Machinery, Inc.
+
 \bibitem{mattern_vector_clocks_1989}
 F.~Mattern.
 \newblock Virtual {T}ime and {G}lobal {S}tates of {D}istributed {S}ystems.
@@ -55,6 +82,22 @@ F.~Mattern.
   time approximation.
 \newblock {\em Journal of Parallel and Distributed Computing}, 18(4):423 --
   434, 1993.
+
+\bibitem{McSherry:2015:SBC:2831090.2831104}
+F.~McSherry, M.~Isard, and D.~G. Murray.
+\newblock Scalability! but at what cost?
+\newblock In {\em Proceedings of the 15th USENIX Conference on Hot Topics in
+  Operating Systems}, HOTOS'15, pages 14--14, Berkeley, CA, USA, 2015. USENIX
+  Association.
+
+\bibitem{Murray_naiad:a}
+D.~G. Murray, F.~Mcsherry, R.~Isaacs, M.~Isard, P.~Barham, and M.~Abadi.
+\newblock Naiad: A timely dataflow system.
+
+\bibitem{scottminimizing}
+C.~Scott, A.~Panda, V.~Brajkovic, G.~Necula, A.~Krishnamurthy, and S.~Shenker.
+\newblock {Minimizing Faulty Executions of Distributed Systems}.
+\newblock In {\em NSDI}, 2016.
 
 \bibitem{yang_modist_nsdi09}
 J.~Yang, T.~Chen, M.~Wu, Z.~Xu, X.~Liu, H.~Lin, M.~Yang, F.~Long, L.~Zhang, and
@@ -68,5 +111,14 @@ J.~Yang, T.~Chen, M.~Wu, Z.~Xu, X.~Liu, H.~Lin, M.~Yang, F.~Long, L.~Zhang, and
 D.~Yurichev.
 \newblock Quick introduction into sat/smt solvers and symbolic execution.
 \newblock https://yurichev.com/writings/SAT\_SMT\_draft\-EN.pdf.
+
+\bibitem{Zaharia:2012:RDD:2228298.2228301}
+M.~Zaharia, M.~Chowdhury, T.~Das, A.~Dave, J.~Ma, M.~McCauley, M.~J. Franklin,
+  S.~Shenker, and I.~Stoica.
+\newblock Resilient distributed datasets: A fault-tolerant abstraction for
+  in-memory cluster computing.
+\newblock In {\em Proceedings of the 9th USENIX Conference on Networked Systems
+  Design and Implementation}, NSDI'12, pages 2--2, Berkeley, CA, USA, 2012.
+  USENIX Association.
 
 \end{thebibliography}

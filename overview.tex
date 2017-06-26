@@ -1,17 +1,20 @@
 \section{Overview}
+\label{sec:overview}
 
-An increasing common trend in distributed computing is the mass execution of
-small process. This pattern is prevalent in big data processing, and micro
-service based architectures. A key tenant of these processes is minimal or non
-existent state. This property is largely due to the complexities of designing
-massive systems which can coordinate stateful behavior. Here we propose a
-technique for analyzing the stateful behavior of thousands of homogeneous
-processes, over many executions. Our analysis aggregates the logs of processes
-from 1 or more executions, and composes them into an aggregate state machine.
-These models are replicated in a runtime, and simulate executions which are
-checked for safety and liveness properties.
+An increasingly common trend in distributed computing is the mass execution of
+small homogeneous proceses. This pattern is prevalent in big data processing,
+and micro service based architectures. A key tenant of these processes is
+minimal or non existent state. This property is largely due to the complexities
+of designing massive systems which can coordinate stateful behavior. Here we
+propose a technique for analyzing the stateful behavior of thousands of
+homogeneous processes, over many executions. Our analysis composes the logs of
+all processes into a single aggregate state machine. This model is replicated
+in a runtime, and is used to simulate new executions which are checked for
+specificed safety and liveness properties. We propose two models for
+constructing aggregate state machines. First a theroretical model which
+generates no false positives, but is constrained to minimal systems. Second a
+pragmatic model for large systems which permits false positives. Our second
+model is paired with additional analysis which orders false positives by their
+likelyhood to be real safty violations.
 
-Further we propose a relaxed model for state machine construction which
-produces smaller, faster to check models, with a dramatized level of false
-positives.
 

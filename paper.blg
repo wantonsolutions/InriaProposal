@@ -7,45 +7,46 @@ Repeated entry---line 10689 of file paper.bib
  : @article{Garg:2014:MAS:2580115.2580404
  :                                       ,
 I'm skipping whatever remains of this entry
-You've used 12 entries,
+Warning--empty booktitle in specifying-and-verifying-systems-with-tla
+You've used 20 entries,
             2118 wiz_defined-function locations,
-            588 strings with 6254 characters,
-and the built_in function-call counts, 4724 in all, are:
-= -- 455
-> -- 248
-< -- 4
-+ -- 99
-- -- 86
-* -- 366
-:= -- 771
-add.period$ -- 36
-call.type$ -- 12
-change.case$ -- 79
+            646 strings with 8338 characters,
+and the built_in function-call counts, 8456 in all, are:
+= -- 824
+> -- 471
+< -- 9
++ -- 188
+- -- 166
+* -- 636
+:= -- 1361
+add.period$ -- 64
+call.type$ -- 20
+change.case$ -- 143
 chr.to.int$ -- 0
-cite$ -- 12
-duplicate$ -- 158
-empty$ -- 353
-format.name$ -- 86
-if$ -- 985
+cite$ -- 21
+duplicate$ -- 302
+empty$ -- 606
+format.name$ -- 166
+if$ -- 1790
 int.to.chr$ -- 0
-int.to.str$ -- 12
-missing$ -- 10
-newline$ -- 62
-num.names$ -- 24
-pop$ -- 78
+int.to.str$ -- 20
+missing$ -- 17
+newline$ -- 101
+num.names$ -- 40
+pop$ -- 154
 preamble$ -- 1
-purify$ -- 67
+purify$ -- 123
 quote$ -- 0
-skip$ -- 125
+skip$ -- 239
 stack$ -- 0
-substring$ -- 314
-swap$ -- 40
-text.length$ -- 4
+substring$ -- 490
+swap$ -- 91
+text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 48
-warning$ -- 0
-while$ -- 43
-width$ -- 14
-write$ -- 132
+type$ -- 80
+warning$ -- 1
+while$ -- 74
+width$ -- 22
+write$ -- 227
 (There was 1 error message)

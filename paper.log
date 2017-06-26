@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.6.16)  23 JUN 2017 16:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.6.16)  26 JUN 2017 17:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -567,48 +567,110 @@ File: pgflibraryshapes.multipart.code.tex 2010/01/07 v3.0.1a (rcs-revision 1.2)
 \pgfnodepartsixbox=\box66
 \pgfnodepartfivebox=\box67
 )))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2013/07/15 v3.0.1a (rcs-revision 1.9)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.1a (rcs-revision 1.7)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty
+Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
+\c@lips@count=\count132
+)
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2012/05/21 v1.0 Adjusting TeX boxes (trim, clip, ...)
+
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks32
+\XKV@tempa@toks=\toks33
+)
+\XKV@depth=\count133
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
+
+(/usr/share/texlive/texmf-dist/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box68
+)
+\tc@llx=\dimen190
+\tc@lly=\dimen191
+\tc@urx=\dimen192
+\tc@ury=\dimen193
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen194
+\adjbox@Height=\dimen195
+\adjbox@Depth=\dimen196
+\adjbox@Totalheight=\dimen197
+
+(/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count134
+)
+(/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box69
+\sift@deathcycles=\count135
+\@vwid@loff=\dimen198
+\@vwid@roff=\dimen199
+))
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 67.
-\captionmargin=\dimen190
-\captionmargin@=\dimen191
-\captionwidth=\dimen192
-\caption@tempdima=\dimen193
-\caption@indent=\dimen194
-\caption@parindent=\dimen195
-\caption@hangindent=\dimen196
+\captionmargin=\dimen256
+\captionmargin@=\dimen257
+\captionwidth=\dimen258
+\caption@tempdima=\dimen259
+\caption@indent=\dimen260
+\caption@parindent=\dimen261
+\caption@hangindent=\dimen262
 )
-\c@ContinuedFloat=\count132
+\c@ContinuedFloat=\count136
 Package caption Info: listings package is loaded.
 )
-\c@theorem=\count133
-\c@definition=\count134
-\c@observation=\count135
-\c@example=\count136
-\c@notation=\count137
-\c@fact=\count138
+\c@theorem=\count137
+\c@definition=\count138
+\c@observation=\count139
+\c@example=\count140
+\c@notation=\count141
+\c@fact=\count142
 
 (./annotations.tex (/usr/share/texlive/texmf-dist/tex/generic/ulem/ulem.sty
-\UL@box=\box68
-\UL@hyphenbox=\box69
+\UL@box=\box70
+\UL@hyphenbox=\box71
 \UL@skip=\skip73
-\UL@hook=\toks32
-\UL@height=\dimen197
-\UL@pe=\count139
-\UL@pixel=\dimen198
-\ULC@box=\box70
+\UL@hook=\toks34
+\UL@height=\dimen263
+\UL@pe=\count143
+\UL@pixel=\dimen264
+\ULC@box=\box72
 Package: ulem 2012/05/18
-\ULdepth=\dimen199
+\ULdepth=\dimen265
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\@emptytoks=\toks33
+\@emptytoks=\toks35
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
@@ -622,19 +684,19 @@ LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
 )) (./paper.aux)
 \openout1 = `paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 123.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 125.
+LaTeX Font Info:    ... okay on input line 125.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 125.
+LaTeX Font Info:    ... okay on input line 125.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 125.
+LaTeX Font Info:    ... okay on input line 125.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 125.
+LaTeX Font Info:    ... okay on input line 125.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 125.
+LaTeX Font Info:    ... okay on input line 125.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 125.
+LaTeX Font Info:    ... okay on input line 125.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 125.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
@@ -642,17 +704,17 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count140
-\scratchdimen=\dimen256
-\scratchbox=\box71
-\nofMPsegments=\count141
-\nofMParguments=\count142
-\everyMPshowfont=\toks34
-\MPscratchCnt=\count143
-\MPscratchDim=\dimen257
-\MPnumerator=\count144
-\makeMPintoPDFobject=\count145
-\everyMPtoPDFconversion=\toks35
+\scratchcounter=\count144
+\scratchdimen=\dimen266
+\scratchbox=\box73
+\nofMPsegments=\count145
+\nofMParguments=\count146
+\everyMPshowfont=\toks36
+\MPscratchCnt=\count147
+\MPscratchDim=\dimen267
+\MPnumerator=\count148
+\makeMPintoPDFobject=\count149
+\everyMPtoPDFconversion=\toks37
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -702,22 +764,22 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count146
+\c@lstlisting=\count150
 
 ABD: EveryShipout initializing macros
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for U+msa on input line 129.
+LaTeX Font Info:    Try loading font information for U+msa on input line 131.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 129.
+LaTeX Font Info:    Try loading font information for U+msb on input line 131.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+wasy on input line 129.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 131.
 
 (/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
@@ -725,81 +787,118 @@ File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
 )
-(./intro.tex) (./model.tex
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 8.
+(./intro.tex [1{/usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+}
+
+
+]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 10.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 71.
+
+
+LaTeX Warning: Reference `sec:evaluation,sec:timeline' on page 2 undefined on i
+nput line 71.
+
+) (./model.tex
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 9.
 ) (./system.tex
-Underfull \hbox (badness 1062) in paragraph at lines 11--21
+Underfull \hbox (badness 1062) in paragraph at lines 12--22
 \OT1/ptm/m/n/10 For this pur-pose we make use of the Dinv run-time
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 11--21
+Underfull \hbox (badness 10000) in paragraph at lines 12--22
 
  []
 
-[1{/usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 106--106
+[]\OT1/ptm/b/n/10 Figure 1: |\OT1/ptm/m/n/10 Din-ing philoso-pher traces. Each 
+pro-cess main-tians 3 state vari-ables,
+ []
 
 
-]
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 41.
+LaTeX Warning: Float too large for page by 72.51614pt on input line 107.
+
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 157.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 41.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 157.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <7> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 41.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 157.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <9> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 41.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 157.
+
+<fig/relaxed.jpg, id=20, 3276.24pt x 2457.18pt>
+File: fig/relaxed.jpg Graphic file (type jpg)
+ <use fig/relaxed.jpg>
+Package pdftex.def Info: fig/relaxed.jpg used on input line 197.
+(pdftex.def)             Requested size: 469.75502pt x 352.28893pt.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 105.
- [2]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 128.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 211.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 234.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 128.
-) (./evaluation.tex)
-(./timeline.tex [3]) (./paper.bbl
-Underfull \hbox (badness 1454) in paragraph at lines 60--66
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 234.
+ [3] [4] [5] [6 <./fig/relaxed.jpg>]) (./evaluation.tex) (./timeline.tex) (./pa
+per.bbl
+
+Package balance Warning: You have called \balance in second column
+(balance)                Columns might not be balanced.
+
+[7]
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no “ in font ptmr7t!
+
+Underfull \hbox (badness 1454) in paragraph at lines 103--109
 \OT1/ptm/m/n/10 Trans-par-ent model check-ing of un-mod-i-fied dis-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--71
+Underfull \hbox (badness 10000) in paragraph at lines 111--114
 []\OT1/ptm/m/n/10 D. Yurichev.  Quick in-tro-duc-tion into
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--71
+Underfull \hbox (badness 10000) in paragraph at lines 111--114
 \OT1/ptm/m/n/10 sat/smt solvers and sym-bolic ex-e-cu-tion.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--71
+Underfull \hbox (badness 10000) in paragraph at lines 111--114
 \OT1/ptm/m/n/10 https://yurichev.com/writings/SAT[]SMT[]draft-
  []
 
-) [4] (./paper.aux) )
+)
+Overfull \vbox (1.17743pt too high) has occurred while \output is active []
+
+
+[8] (./paper.aux)
+
+LaTeX Warning: There were undefined references.
+
+ )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 17391 strings out of 494876
- 341799 string characters out of 6178697
- 403555 words of memory out of 5000000
- 20314 multiletter control sequences out of 15000+600000
+ 18573 strings out of 494876
+ 361659 string characters out of 6178697
+ 545474 words of memory out of 5000000
+ 21447 multiletter control sequences out of 15000+600000
  33981 words of font info for 81 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 55i,13n,68p,418b,14096s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,13n,92p,418b,15275s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/sgrant/.cache/texlive/texmf-var/fonts/pk/ljfour/public/
 cm/cmr9.600pk> </home/sgrant/.cache/texlive/texmf-var/fonts/pk/ljfour/public/cm
 /cmsy9.600pk> </home/sgrant/.cache/texlive/texmf-var/fonts/pk/ljfour/public/cm/
@@ -815,10 +914,10 @@ mf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/font
 s/type1/urw/helvetic/uhvro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (4 pages, 100652 bytes).
+Output written on paper.pdf (8 pages, 1795542 bytes).
 PDF statistics:
- 177 PDF objects out of 1000 (max. 8388607)
- 69 compressed objects within 1 object stream
+ 204 PDF objects out of 1000 (max. 8388607)
+ 79 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

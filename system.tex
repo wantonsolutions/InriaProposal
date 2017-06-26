@@ -1,4 +1,5 @@
 \section{System}
+\label{sec:system}
 
 The following section describes our analysis system. The section is broken up
 into 3 section. First the translation of distributed logs to aggregated FSM is
@@ -38,16 +39,116 @@ Matching states are processed in linear time by hashing and mapping variable
 states. Similarly edges are constructed using \textbf{Event Matching}. As above
 relaxed event matching is performed on a subset of user defined variables.
 
-\todo{Finish Diagram}
-\begin{tikzpicture}[>=stealth',shorten >=1pt,auto, node distance=2cm]
+%%\todo{Finish Diagram}
 
-    \node[initial,state] (I) {$I$};
-    \node[state]    (asleep)  [below of=I] {$asleep$};
-    \node[state]    (hungry)  [below of=asleep] {$hungry$};
+\begin{figure*}
+\begin{minipage}{.3\textwidth}
+\begin{tikzpicture}[>=stealth',shorten >=1pt,auto, node distance=3cm]
 
-    \path[->] (I) edge node {$sleep$} (asleep);
+    \node[initial,state] (I-0) {$I:0:0$};
+    \node[state]    (asleep-0)  [below of=I-0] {$sleep:0:0$};
+    \node[state]    (hungry-0-0)  [below of=asleep-0] {$hungry:0:0$};
+    \node[state]    (hungry-0-1)  [below of=hungry-0-0] {$hungry:0:0$};
+    \node[state]    (hungry-0-2)  [below of=hungry-0-1] {$hungry:0:0$};
+    \node[state]    (hungry-0-3)  [below of=hungry-0-2] {$hungry:0:0$};
+
+    \path[->] (I-0) edge node {$sleep$} (asleep-0);
+    \path[->] (asleep-0) edge node {$wake$} (hungry-0-0);
+    \path[->] (hungry-0-0) edge node {$rec-req$} (hungry-0-1);
+    \path[->] (hungry-0-1) edge node {$send-ok$} (hungry-0-2);
+    \path[->] (hungry-0-2) edge node {$rec-done$} (hungry-0-3);
 
 \end{tikzpicture}
+\end{minipage}
+\begin{minipage}{.3\textwidth}
+\begin{tikzpicture}[>=stealth',shorten >=.8pt,auto, node distance=3.0cm]
+
+    \node[initial,state] (I-1) {$I:0:0$};
+    \node[state]    (hungry-1-0)  [below of=I-1] {$hungry:0:0$};
+    \node[state]    (hungry-1-1)  [below of=hungry-1-0] {$hungry:1:0$};
+    \node[state]    (hungry-1-2)  [below of=hungry-1-1] {$hungry:2:0$};
+    \node[state]    (hungry-1-3)  [below of=hungry-1-2] {$hungry:2:1$};
+    \node[state]    (hungry-1-4)  [below of=hungry-1-3] {$hungry:2:2$};
+    \node[state]    (eating-1-0)  [below of=hungry-1-4] {$eating:2:2$};
+    \node[state]    (sleeping-1-0)  [below of=eating-1-0] {$sleep:0:0$};
+
+    \path[->] (I-0) edge node {$wake$} (hungry-1-0);
+    \path[->] (hungry-1-0) edge node {$send-req$} (hungry-1-1);
+    \path[->] (hungry-1-1) edge node {$send-req$} (hungry-1-2);
+    \path[->] (hungry-1-2) edge node {$rec-ok$} (hungry-1-3);
+    \path[->] (hungry-1-3) edge node {$rec-ok$} (hungry-1-4);
+    \path[->] (hungry-1-4) edge node {$eat$} (eating-1-0);
+    \path[->] (eating-1-0) edge node {$sleep$} (sleeping-1-0);
+
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{.3\textwidth}
+\begin{tikzpicture}[>=stealth',shorten >=1pt,auto, node distance=3cm]
+
+    \node[initial,state] (I-0) {$I:0:0$};
+    \node[state]    (asleep-2-0)  [below of=I-0] {$sleep:0:0$};
+    \node[state]    (asleep-2-1)  [below of=asleep-2-0] {$sleep:0:0$};
+    \node[state]    (asleep-2-2)  [below of=asleep-2-1] {$sleep:0:0$};
+    \node[state]    (asleep-2-3)  [below of=asleep-2-2] {$sleep:0:0$};
+
+    \path[->] (I-0) edge node {$sleep$} (asleep-2-0);
+    \path[->] (asleep-2-0) edge node {$rec-req$} (asleep-2-1);
+    \path[->] (asleep-2-1) edge node {$send-ok$} (asleep-2-2);
+    \path[->] (asleep-2-2) edge node {$rec-done$} (asleep-2-3);
+
+
+\end{tikzpicture}
+\end{minipage}
+
+    \caption{Dining philosopher traces. Each process maintians 3 state
+    variables, [$currentState$,$OustandingRequests$,$AcksReceived$]. When hungry a
+philosopher requests to eat from its neighbour, each request increases
+outstandingRequets. A philosopher can eat after receiving two acks.}
+\end{figure*}
+
+
+\begin{figure*}
+\begin{tikzpicture}[>=stealth',shorten >=.8pt,auto, node distance=4.0cm]
+
+    \node[initial,state] (I-1) {$I:0:0$};
+
+    %s1
+    \node[state]    (hungry-1-0)  [below right of=I-1] {$hungry:0:0$};
+
+    \node[state]    (hungry-1-1)  [below right of =hungry-1-0] {$hungry:1:0$};
+    \node[state]    (hungry-1-2)  [below left of=hungry-1-1] {$hungry:2:0$};
+    \node[state]    (hungry-1-3)  [above left of=hungry-1-2] {$hungry:2:1$};
+    \node[state]    (sleeping-1-0)  [below left of=I-1] {$sleep:0:0$};
+    \node[state]    (eating-1-0)  [below left of=sleeping-1-0] {$eating:2:2$};
+    \node[state]    (hungry-1-4)  [below right of=eating-1-0] {$hungry:2:2$};
+
+    \path[->] (I-0) edge [bend left ]node {$wake$} (hungry-1-0);
+    \path[->] (I-0) edge [bend right] node {$sleep$} (sleeping-1-0);
+
+    \path[->] (hungry-1-0) edge node {$send-req$} (hungry-1-1);
+    \path[->] (hungry-1-1) edge node {$send-req$} (hungry-1-2);
+    \path[->] (hungry-1-2) edge node {$rec-ok$} (hungry-1-3);
+    \path[->] (hungry-1-3) edge node {$rec-ok$} (hungry-1-4);
+    \path[->] (hungry-1-4) edge node {$eat$} (eating-1-0);
+    \path[->] (eating-1-0) edge node {$sleep$} (sleeping-1-0);
+
+
+    \path[->] (hungry-1-0) edge [loop left] node {$rec-req$} (hungry-1-0);
+    \path[->] (hungry-1-0) edge [loop right,swap] node {$send-ok$} (hungry-1-0);
+    \path[->] (hungry-1-0) edge [loop below] node {$rec-done$} (hungry-1-0);
+
+    \path[->] (sleeping-1-0) edge [loop left] node {$rec-req$} (sleeping-1-0);
+    \path[->] (sleeping-1-0) edge [loop right] node {$send-ok$} (sleeping-1-0);
+    \path[->] (sleeping-1-0) edge [loop below] node {$rec-done$} (sleeping-1-0);
+
+    \path[->] (sleeping-1-0) edge [bend right] node {$wake$} (hungry-1-0);
+
+\end{tikzpicture}
+\caption{Aggregate state machine from 3 traces, using exact state matching}
+\end{figure*}
+
+%\begin{adjustbox}
+%\end{adjustbox}
 
 \subsection{Invariant Detection, and operation inference}
 
@@ -91,6 +192,11 @@ using Z3, and input output examples from traces~\cite{SMTSynth}. The state
 transitions inferred by Z3 are applied to variables during runtime. In cases
 where no operations could be inferred within a given timeout, a value is
 deterministicly chosen for relaxed variable.
+
+\begin{figure*}
+    \includegraphics[width=\textwidth]{fig/relaxed}
+\end{figure*}
+
 
 \subsection{Runtime}
 
