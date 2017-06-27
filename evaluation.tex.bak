@@ -3,12 +3,12 @@
 
 The analysis technique proposed in this work should be demonstrated to scale to
         thousands of processes over multiple executions. Further it should be
-        shown that the time to replay executions is orders of magnitude lower
+        shown that the time to replay executions is orders of magnitued lower
         than executing the system itself. The speedup boasted by Modist is
         ~200x because they sped up timeouts. Because the majority of
         computation is skipped our numbers should be much lower. The cost of
-        generating models may be high, this should be shown to be an amortized
-        cost over many profiled executions. Finally, effort should be minimal
+        generating models may be high, this should be shown to be an amoritzed
+        cost over many profiled executions. Finally, effor should be minimal
         for the end user. Given that \dinv can already generate logging
         statements for all in scope variables, logging should be automatic.
         Users should only have to capture network functions \& specify
@@ -23,9 +23,9 @@ The analysis technique proposed in this work should be demonstrated to scale to
             \item ExCamera ~\cite{201559}. A custom logger (Java) could be written to capture the state of this algorithm
 
             \item TensorFlow programs require stateful interaction. An
-                evaluation of TensorFlow would involve analyzing the framework
+                evaluation of tensorflow would involve analyzing the framwork
                 itself. Further investigation is needed to understand their
-                consistency mechanism. If it is the same timely flow as Naiad,
+                consistancy mechanism. If it is the same timely flow as Naiad,
                 it has well defined predicates.
 
         \end{itemize}

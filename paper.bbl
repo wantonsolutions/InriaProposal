@@ -11,6 +11,16 @@ O.~Babaoglu and M.~Raynal.
 \newblock {\em Journal of Parallel and Distributed Computing}, 28(2):173 --
   185, 1995.
 
+\bibitem{glow}
+chrislusf.
+\newblock Glow.
+\newblock https://github.com/chrislusf/glow, 2016.
+
+\bibitem{gleam}
+chrislusf.
+\newblock Gleam.
+\newblock https://github.com/chrislusf/gleam, 2017.
+
 \bibitem{Corbineau:2007:DLC:1786134.1786139}
 P.~Corbineau.
 \newblock A declarative language for the coq proof assistant.
@@ -60,6 +70,12 @@ V.~K. Garg, A.~Agarwal, and V.~Ogale.
 \newblock Modeling, analyzing and slicing periodic distributed computations.
 \newblock {\em Inf. Comput.}, 234:26--43, Feb. 2014.
 
+\bibitem{automating-string-processing-spreadsheets-using-input-output-examples}
+S.~Gulwani.
+\newblock Automating string processing in spreadsheets using input-output
+  examples.
+\newblock January 2011.
+
 \bibitem{Hurfin:1998:EDD:286181.286G191}
 M.~Hurfin, M.~Mizuno, M.~Singhal, and M.~Raynal.
 \newblock Efficient distributed detection of conjunctions of local predicates.
@@ -98,6 +114,13 @@ D.~G. Murray, F.~Mcsherry, R.~Isaacs, M.~Isard, P.~Barham, and M.~Abadi.
 C.~Scott, A.~Panda, V.~Brajkovic, G.~Necula, A.~Krishnamurthy, and S.~Shenker.
 \newblock {Minimizing Faulty Executions of Distributed Systems}.
 \newblock In {\em NSDI}, 2016.
+
+\bibitem{Torlak:2013:GSL:2509578.2509586}
+E.~Torlak and R.~Bodik.
+\newblock Growing solver-aided languages with rosette.
+\newblock In {\em Proceedings of the 2013 ACM International Symposium on New
+  Ideas, New Paradigms, and Reflections on Programming \& Software}, Onward!
+  2013, pages 135--152, New York, NY, USA, 2013. ACM.
 
 \bibitem{yang_modist_nsdi09}
 J.~Yang, T.~Chen, M.~Wu, Z.~Xu, X.~Liu, H.~Lin, M.~Yang, F.~Long, L.~Zhang, and

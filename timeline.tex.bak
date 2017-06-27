@@ -2,7 +2,7 @@
 \label{sec:timeline}
 \begin{itemize}
 
-    \item \textbf{June 6 - 15} Read and get familiar with associated work
+    \item \textbf{June 6 - 15} Read and get familair with associed work
 
     \item \textbf{June 16 - 22} Brainstorm new ideas
 
@@ -12,11 +12,11 @@
     
     \item \textbf{July 11 - July 17} Implement relaxed matching FSM (Test on simplified Dining philosopher)
 
-    \item \textbf{July 18 - July 28} Build simulation runtime (generating, and scheduling events, and building traces)
+    \item \textbf{July 18 - July 28} Build simulation runtime (generating, and scheduing events, and building traces)
     
     \item \textbf{July 29 - Aug 10} Add simulated variables to runtime and invariant divergence checking
 
-    \item \textbf{Aug 11 - 17} Apply technique to multiple executions of ETCD raft
+    \item \textbf{Aug 11 - 17} Apply techniqe to multiple executions of ETCD raft
 
     \item \textbf{Aug 18 - 25} Apply analysis to Hadoop / Excamera / Naiaid
 

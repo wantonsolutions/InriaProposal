@@ -3,50 +3,47 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: paper.aux
 The style file: abbrv.bst
 Database file #1: paper.bib
-Repeated entry---line 10689 of file paper.bib
- : @article{Garg:2014:MAS:2580115.2580404
- :                                       ,
-I'm skipping whatever remains of this entry
+Warning--empty booktitle in automating-string-processing-spreadsheets-using-input-output-examples
 Warning--empty booktitle in specifying-and-verifying-systems-with-tla
-You've used 20 entries,
+You've used 24 entries,
             2118 wiz_defined-function locations,
-            646 strings with 8338 characters,
-and the built_in function-call counts, 8456 in all, are:
-= -- 824
-> -- 471
-< -- 9
-+ -- 188
-- -- 166
-* -- 636
-:= -- 1361
-add.period$ -- 64
-call.type$ -- 20
-change.case$ -- 143
+            666 strings with 8884 characters,
+and the built_in function-call counts, 9570 in all, are:
+= -- 937
+> -- 505
+< -- 10
++ -- 202
+- -- 176
+* -- 685
+:= -- 1535
+add.period$ -- 77
+call.type$ -- 24
+change.case$ -- 160
 chr.to.int$ -- 0
-cite$ -- 21
-duplicate$ -- 302
-empty$ -- 606
-format.name$ -- 166
-if$ -- 1790
+cite$ -- 26
+duplicate$ -- 352
+empty$ -- 715
+format.name$ -- 176
+if$ -- 2042
 int.to.chr$ -- 0
-int.to.str$ -- 20
-missing$ -- 17
-newline$ -- 101
-num.names$ -- 40
-pop$ -- 154
+int.to.str$ -- 24
+missing$ -- 19
+newline$ -- 121
+num.names$ -- 48
+pop$ -- 184
 preamble$ -- 1
-purify$ -- 123
+purify$ -- 136
 quote$ -- 0
-skip$ -- 239
+skip$ -- 280
 stack$ -- 0
-substring$ -- 490
-swap$ -- 91
-text.length$ -- 9
+substring$ -- 542
+swap$ -- 104
+text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 80
-warning$ -- 1
-while$ -- 74
-width$ -- 22
-write$ -- 227
-(There was 1 error message)
+type$ -- 96
+warning$ -- 2
+while$ -- 85
+width$ -- 26
+write$ -- 270
+(There were 2 warnings)
